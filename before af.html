@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            position: relative;
+            margin: auto;
+            background-image: url("img/c3.jpg");
+        }
+        
+        .box::before {
+            content: '';
+            background-color: rgb(0, 0, 0);
+            left: 0px;
+            height: 50px;
+            width: 0px;
+            position: absolute;
+            bottom: 0px;
+            transition: 1s;
+        }
+        
+        .box:hover::before {
+            height: 50px;
+            width: 300px;
+        }
+        
+        .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url("img/c3.jpg");
+        }
+        
+        .box1::before {
+            content: '';
+            background-color: rgb(0, 0, 0);
+            right: 0px;
+            height: 50px;
+            width: 0px;
+            position: absolute;
+            bottom: 0px;
+            transition: 1s;
+        }
+        
+        .box1:hover::before {
+            height: 50px;
+            width: 300px;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            position: relative;
+            margin-top: -620px;
+            margin-left: 20px;
+            background-image: url("img/c3.jpg");
+            overflow: hidden;
+        }
+        
+        .box2::before {
+            content: '';
+            width: 0;
+            height: 300px;
+            background-color: rgba(235, 163, 163, 0.658);
+            position: absolute;
+            transition: 1s;
+            right: 0px;
+            border-radius: 150px;
+        }
+        
+        .box2:hover::before {
+            width: 300px;
+            height: 300px;
+            right: -150px;
+        }
+        
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            position: relative;
+            margin-top: 8px;
+            margin-left: 20px;
+            background-image: url("img/c3.jpg");
+            overflow: hidden;
+        }
+        
+        .box3::before {
+            content: '';
+            width: 0;
+            height: 300px;
+            background-color: rgba(223, 240, 210, 0.959);
+            position: absolute;
+            transition: 1s;
+            left: 0px;
+            border-radius: 150px;
+        }
+        
+        .box3:hover::before {
+            width: 300px;
+            height: 300px;
+            left: -150px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="box">
+
+
+
+
+            </div>
+            <div class="box1">
+
+            </div>
+            <br>
+
+            <div class="box2"></div>
+
+            <br>
+            <div class="box3"></div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

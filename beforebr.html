@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            margin: auto;
+            margin-top: 50px;
+            position: relative;
+            background-image: url("img/c3.jpg");
+            overflow: hidden;
+        }
+        
+        .box::before {
+            content: '';
+            height: 300px;
+            width: -300px;
+            background-color: transparent;
+            position: absolute;
+            left: -300px;
+            border-top: 5px solid;
+            border-bottom: 5px solid;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        
+        .box:hover::before {
+            left: 300px;
+            width: 300px;
+        }
+        
+        .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            margin-top: 50px;
+            position: relative;
+            margin-top: -300px;
+            margin-left: 120px;
+            background-image: url("img/c3.jpg");
+            overflow: hidden;
+        }
+        
+        .box1::before {
+            content: '';
+            height: 300px;
+            width: 300px;
+            background-color: transparent;
+            position: absolute;
+            top: -300px;
+            border-left: 5px solid;
+            border-right: 5px solid;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        
+        .box1:hover::before {
+            top: 300px;
+            width: 300px;
+        }
+        
+        .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            margin: auto;
+            margin-left: 200px;
+            margin-top: 50px;
+            position: relative;
+            background-image: url("img/c3.jpg");
+            overflow: hidden;
+        }
+        
+        .box2::before {
+            content: '';
+            height: 300px;
+            width: 300px;
+            background-color: transparent;
+            position: absolute;
+            left: 300px;
+            border-top: 5px solid;
+            border-bottom: 5px solid;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        
+        .box2:hover::before {
+            left: 0;
+            width: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+</body>
+
+</html>
